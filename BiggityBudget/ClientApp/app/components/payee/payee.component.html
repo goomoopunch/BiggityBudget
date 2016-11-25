@@ -1,0 +1,7 @@
+﻿<h1>Payees</h1>
+
+<button type="button" class="btn btn-default" (click)="mode = 'add'">
+    <i class="glyphicon glyphicon-plus-sign"></i> Add New Payee
+</button>
+
+<add-payee [hidden]="mode != 'add'" (ok)="addPayee()" (cancel)="mode = 'list'"></add-payee>

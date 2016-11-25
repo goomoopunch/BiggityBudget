@@ -1,0 +1,19 @@
+﻿<p>Add Payee Comp</p>
+
+<label for="name">Name</label>
+<input type="text" class="form-control" id="name" required>
+
+<label for="dayOfMonthDue">Day Of Month Due</label>
+<input type="number" class="form-control" id="dayOfMonthDue" min="1" max="31">
+
+<label>Category</label>
+<select>
+    <option *ngFor="let ct of categoryTypes | keys" value="{{ct.key}}">{{ct.value}}</option>
+</select>
+
+<button type="button" class="btn btn-danger" (click)="cancelClick()">
+    <i class="glyphicon glyphicon-remove"></i> Cancel
+</button>
+<button type="button" class="btn btn-primary" (click)="okClick()">
+    <i class="glyphicon glyphicon-ok"></i> OK
+</button>
