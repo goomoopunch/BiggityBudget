@@ -15,7 +15,6 @@ namespace BiggityBudget1
     {
         public Startup(IHostingEnvironment env)
         {
-            // Test Commit
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
                 .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
